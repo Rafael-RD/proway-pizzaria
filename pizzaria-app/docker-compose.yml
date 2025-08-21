@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./backend
+    networks:
+      - pizzariaNetwork
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    networks:
+      - pizzariaNetwork
+networks:
+  pizzariaNetwork:
